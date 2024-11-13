@@ -126,7 +126,73 @@ aside img {
     padding-bottom: 1em;
 }
 
+/* Nav Menu */
+#nav_menu ul {
+    list-style: none; /* Removes the bullets from the list */
+    margin: 0; /* Sets the margin to 0 */
+    padding: 0; /* Sets the padding to 0 */
+    display: flex; /* Aligns menu items horizontally */
+}
 
+#nav_menu ul li {
+    position: relative; /* Required for proper positioning of dropdowns */
+}
+
+#nav_menu ul li a {
+    display: block; /* Makes the links block-level elements */
+    width: 160px; /* Fixed width for menu items */
+    text-align: center; /* Centers the text inside the block */
+    padding: 1em 0; /* Adds padding above and below the text */
+    text-decoration: none; /* Removes the underline from the links */
+    background-color: #800000; /* Sets the background color */
+    color: white; /* Sets the text color to white */
+    font-weight: bold; /* Makes the text bold */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+#nav_menu ul li a:hover {
+    background-color: #931420; /* Changes background on hover */
+}
+
+#nav_menu ul li a.current {
+    color: yellow; /* Highlights the current link in yellow */
+}
+
+/* Dropdown Menu */
+#nav_menu ul ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #931420;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+}
+
+#nav_menu ul ul.dropdown li {
+    width: 160px;
+    float: none;
+}
+
+#nav_menu ul ul.dropdown li a {
+    display: block;
+    padding: 0.5em 1em;
+    background-color: #931420;
+    color: white;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+#nav_menu ul ul.dropdown li a:hover {
+    background-color: #b92a30;
+}
+
+/* Show the dropdown menu on hover */
+#nav_menu ul li:hover > ul.dropdown {
+    display: block;
+}
 footer {
     background-color: #931420;
     clear: both;
